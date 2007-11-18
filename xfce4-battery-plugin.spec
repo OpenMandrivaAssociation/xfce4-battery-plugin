@@ -6,8 +6,8 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin
 Source0:	%{name}-%{version}.tar.bz2
-Requires:	xfce-panel >= 4.4.0
-BuildRequires:	xfce-panel-devel >= 4.4.0
+Requires:	xfce4-panel >= 4.4.0
+BuildRequires:	xfce4-panel-devel >= 4.4.0
 BuildRequires:	libxfcegui4-devel >= 4.4.0
 BuildRequires:	perl(XML::Parser)
 Obsoletes:	xfce-battery-plugin
