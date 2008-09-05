@@ -1,13 +1,11 @@
 Summary:	Battery monitor plugin for the Xfce panel
 Name:		xfce4-battery-plugin
-Version:	0.5.0
-Release:	%mkrel 9
+Version:	0.5.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
-URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin
-Source0:	%{name}-%{version}.tar.bz2
-Patch0:		02_fix-2.6.21.patch
-Patch1:		03_lower-acpi-polling.patch
+URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
+Source0:	http://goodies.xfce.org/releases/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		%{name}-0.5.0-fixes-against-kernel-2.6.24.patch
 Patch3:		07_use-sysfs-fixed.patch
 Requires:	xfce4-panel >= 4.4.2
@@ -22,8 +20,6 @@ Battery monitor panel plugin for the Xfce Desktop Environment.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p0
 %patch2 -p1
 %patch3 -p1
 
