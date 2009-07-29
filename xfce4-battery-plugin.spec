@@ -1,7 +1,7 @@
 Summary:	Battery monitor plugin for the Xfce panel
 Name:		xfce4-battery-plugin
 Version:	0.5.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://goodies.xfce.org/projects/panel-plugins/%{name}
@@ -36,11 +36,15 @@ rm -f %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 
 %find_lang %{name}
 
+%if %mdkversion < 200900
 %post
 %update_icon_cahe hicolor
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_icon_cache hicolor
+%endif
 
 %clean
 rm -rf %{buildroot}
