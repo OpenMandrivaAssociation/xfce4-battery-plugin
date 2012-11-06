@@ -34,6 +34,6 @@ rm -f %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 
 %files -f %{name}.lang
 %doc README ChangeLog AUTHORS
-%{_libdir}/xfce4/panel-plugins/*
-%{_datadir}/xfce4/panel-plugins/*
+%{_libdir}/xfce4/panel/plugins/libbattery.so
+%{_datadir}/xfce4/panel/plugins/battery.desktop
 %{_iconsdir}/hicolor/*/apps/*.*g
