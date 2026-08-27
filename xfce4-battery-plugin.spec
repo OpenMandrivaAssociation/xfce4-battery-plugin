@@ -34,7 +34,7 @@ chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README.md ChangeLog AUTHORS
+%doc README.md AUTHORS
 %{_libdir}/xfce4/panel/plugins/*
 %{_datadir}/xfce4/panel/plugins/*
 %{_iconsdir}/hicolor/*/apps/*.*g
