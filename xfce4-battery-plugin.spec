@@ -3,21 +3,17 @@
 
 Summary:	Battery monitor plugin for the Xfce panel
 Name:		xfce4-battery-plugin
-Version:	1.1.6
+Version:	1.2.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://goodies.xfce.org/projects/panel-plugins/%{name}
 Source0:	https://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/%{url_ver}/%{name}-%{version}.tar.bz2
-Requires:	xfce4-panel >= 4.8.0
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+Requires:	xfce4-panel >= 4.20.0
+BuildRequires:	meson
 BuildRequires:	make
 BuildRequires:	pkgconfig(libxfce4panel-2.0)
 BuildRequires:	pkgconfig(libxfce4ui-2)
-BuildRequires:	perl(XML::Parser)
 
 %description
 Battery monitor panel plugin for the Xfce Desktop Environment.
@@ -26,11 +22,11 @@ Battery monitor panel plugin for the Xfce Desktop Environment.
 %autosetup -p1
 
 %build
-%configure
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 rm -f %{buildroot}%{_iconsdir}/hicolor/icon-theme.cache
 chmod +x %{buildroot}%{_libdir}/xfce4/panel/plugins/*.so
